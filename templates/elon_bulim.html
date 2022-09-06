@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>elonlar</title>
+</head>
+<body>
+ <h1 style="color:blue"><a href="{% url 'post_bulim' %}">E'lonlar bulimi</a></h1>
+
+    {% for post1 in elon_uchun %}
+
+    <h4><a href="{% url 'elon' post1.pk %}" > {{post1.title}}</a></h4>
+    <p>{{post1.body}}</p>
+    {% endfor %}
+</body>
+{% endblock content %}
+</html>

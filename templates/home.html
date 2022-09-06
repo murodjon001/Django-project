@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Mahalliy yangiliklar</h1>
+
+    <div class="nav-right">
+        <a href="{% url 'post_new' %}">Maqola qo'shing!</a>
+    </div>
+<ul>
+    {% for post in default %}
+        <li>
+            <h2> <a href="{% url 'post_detail' post.pk %}">{{ post.title }} </a> </h2>
+            <br> {{post.body}}
+        </li>
+
+    {% endfor %}
+</ul>
+<ul>
+
+<!--    <h3>E'lonlar bulimi</h3>-->
+<!--    {% for post1 in elon_uchun %}-->
+<!--    <li>-->
+<!--        <h4><a href="{% url 'elon' post1.pk %}">{{ post1.titile }}</a></h4>-->
+<!--        <p>{{ post1.body }}</p>-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% endblock content %}-->
+
+
+

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h2 style="color:green"> Ro'yxatdan o'tish </h2>
+<form method="post">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-outline-success" value="Ro'yxatdan utish">
+</form>
+{% endblock content %}

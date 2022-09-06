@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <h1>bu detail template</h1>
+    <ul>
+        <li>
+            <a href="{% url 'post_detail' post.pk %}">{{post.title}}</a>
+            <h2>{{post.title}}</h2> <br> {{post.body}} </br>
+            <a href="{% url 'post_edit' post.pk %}"> postni tahrirlash </a><br>
+            <a href="{%url 'post_delete' post.pk %}">Delete</a>
+        </li>
+    </ul>
+{% endblock content %}
